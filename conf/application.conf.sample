@@ -9,8 +9,6 @@ application.name=associations
 application.mode=dev
 %prod.application.mode=prod
 
-module.cms=../play-cms
-
 # Secret key
 # ~~~~~
 # The secret key is used to secure cryptographics functions
