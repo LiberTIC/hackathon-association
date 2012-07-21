@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'Import CSV' /}
+
+#{if flash.success}
+    <div class="alert alert-success">
+        ${flash.success}
+    </div>
+#{/if}
+
+
+#{ifErrors}
+    <div class="alert alert-error">
+        <strong>&{'error'}</strong>&{'error.checkform'}
+    </div>
+#{/ifErrors}
+
+
+#{form @Import.execute(), enctype:'multipart/form-data'}
+
+    <label for="year">Année : </label>
+    <input type="text" name="year" id="year" />
+    <br/>
+    
+    <label for="file">Fichier: </label>
+    <input type="file" name="csv" id="file" />
+    
+    <input type="submit" name="import" />
+    
+#{/form}
