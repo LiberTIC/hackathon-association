@@ -3,14 +3,11 @@
 # ~~~~
 
 # Home page
-GET   /                                       Application.index
-
+GET   /                                       Carte.carte
 GET   /import                                 Import.page
 POST  /import                                 Import.execute
 
-GET   /carte                                  Carte.carte
 
-GET   /page                                     module:cms
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
